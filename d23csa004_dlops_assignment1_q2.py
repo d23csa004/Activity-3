@@ -308,7 +308,7 @@ criterion = nn.MSELoss()
 writer = SummaryWriter()
 
 # Training loop
-num_epochs = 10
+num_epochs = 20
 for epoch in range(num_epochs):
     running_loss = 0.0
     for images in train_loader:
