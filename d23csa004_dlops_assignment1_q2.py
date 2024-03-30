@@ -107,7 +107,7 @@ model.eval()
 with torch.no_grad():
     for images, _ in train_loader:
         reconstructions = model(images)
-        for i in range(4):  # Visualize first 4 images
+        for i in range(10):  # Visualize first 10 images
             plt.figure(figsize=(10, 5))
             plt.subplot(1, 2, 1)
             plt.title('Original')
@@ -308,7 +308,7 @@ criterion = nn.MSELoss()
 writer = SummaryWriter()
 
 # Training loop
-num_epochs = 20
+num_epochs = 50
 for epoch in range(num_epochs):
     running_loss = 0.0
     for images in train_loader:
